@@ -126,8 +126,9 @@ Survival, Education, Destruction, Protection, Concealment.
             </div>
             <br/>
             <br/>
-            <div class="terminal-submit">
+            <div class="terminal-submit" style="display: inline-flex; padding: 10px">
                 <button class="submitbtn btn btn-outline-info btn-lg" type="button" id="submit" style="margin: 10px; margin-left: 45%;">&nbsp;部&nbsp;&nbsp;署&nbsp;</button>
+                <button class="submitbtn btn btn-outline-info btn-lg" type="button" id="reset" style="margin: 10px; margin-left: 45%;">&nbsp;重&nbsp;&nbsp;置&nbsp;</button>
             </div>
             <br/>
             <br/>
@@ -251,6 +252,7 @@ Survival, Education, Destruction, Protection, Concealment.
             }
             
             submit.addEventListener("click", deploy);
+            reset.addEvetnListener("click", generate);
             window.addEventListener('load', generate);
         </script>
     </body>
