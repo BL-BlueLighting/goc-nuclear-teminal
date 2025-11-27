@@ -1,0 +1,257 @@
+<!--
+
+
+░██████╗░██╗░░░░░░█████╗░██████╗░░█████╗░██╗░░░░░  ░█████╗░░█████╗░░█████╗░██╗░░░██╗██╗░░░░░████████╗
+██╔════╝░██║░░░░░██╔══██╗██╔══██╗██╔══██╗██║░░░░░  ██╔══██╗██╔══██╗██╔══██╗██║░░░██║██║░░░░░╚══██╔══╝
+██║░░██╗░██║░░░░░██║░░██║██████╦╝███████║██║░░░░░  ██║░░██║██║░░╚═╝██║░░╚═╝██║░░░██║██║░░░░░░░░██║░░░
+██║░░╚██╗██║░░░░░██║░░██║██╔══██╗██╔══██║██║░░░░░  ██║░░██║██║░░██╗██║░░██╗██║░░░██║██║░░░░░░░░██║░░░
+╚██████╔╝███████╗╚█████╔╝██████╦╝██║░░██║███████╗  ╚█████╔╝╚█████╔╝╚█████╔╝╚██████╔╝███████╗░░░██║░░░
+░╚═════╝░╚══════╝░╚════╝░╚═════╝░╚═╝░░╚═╝╚══════╝  ░╚════╝░░╚════╝░░╚════╝░░╚═════╝░╚══════╝░░░╚═╝░░░
+
+░█████╗░░█████╗░░█████╗░██╗░░░░░██╗████████╗██╗░█████╗░███╗░░██╗
+██╔══██╗██╔══██╗██╔══██╗██║░░░░░██║╚══██╔══╝██║██╔══██╗████╗░██║
+██║░░╚═╝██║░░██║███████║██║░░░░░██║░░░██║░░░██║██║░░██║██╔██╗██║
+██║░░██╗██║░░██║██╔══██║██║░░░░░██║░░░██║░░░██║██║░░██║██║╚████║
+╚█████╔╝╚█████╔╝██║░░██║███████╗██║░░░██║░░░██║╚█████╔╝██║░╚███║
+░╚════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝
+
+We are the Global Occult Coalition.
+This is our terminal for magic nuclear.
+Please do not copy it's source code.
+
+Survival, Education, Destruction, Protection, Concealment.
+
+-->
+<!doctype html>
+<html>
+    <head>
+        <title>the Global Occult Coalition - 奇术打击终端</title>
+        <link href="http://scp-wiki.wdfiles.com/local--files/svg-animation/gocLogo.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: black;
+                background-image: var(--gocLogo);
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                overflow: hidden;
+                padding: 20px;
+                color: white;
+                
+                transition: background-image 1s ease-in-out;
+            }
+            
+            .none {
+                background-image: none;
+            }
+            
+            .terminal {
+                background-color: rgba(10, 15, 30, 0.9);
+                border: 1px solid #2a4c7a;
+                border-radius: 12px;
+                box-shadow: 0 0 30px rgba(42, 76, 122, 0.6);
+                width: 90%;
+                max-width: 1000px;
+                padding: 30px;
+                position: relative;
+                z-index: 10;
+                backdrop-filter: blur(5px);
+                opacity: 1;
+                
+                transition: opacity 1s ease-in-out;
+            }
+            
+            hr {
+                color: #2a4c7a;
+            }
+            
+            .answer-input {
+                background-color: rgba(20, 30, 48, 0.7);
+                border: 1px solid #2a4c7a;
+                border-radius: 6px;
+                padding: 12px 15px;
+                color: #e0e0e0;
+                font-size: 16px;
+                transition: all 0.3s;
+                font-family: 'Segoe UI', sans-serif;
+            }
+            
+            .answer-input:focus {
+                outline: none;
+                border-color: #4c98e4;
+                box-shadow: 0 0 8px rgba(76, 152, 228, 0.5);
+            }
+            
+            .hide {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="terminal">
+            <div class="terminal-header" style="display: inline-flex;">
+                <img src="https://scp-wiki.wdfiles.com/local--resized-images/goc-hub-page/GOC-Logo-v4.png/medium.jpg" style="width: 50px; height: 50px;">
+                <h3 style="color: white; margin-left: 27px; margin-bottom: 27px;">G.O.C. 奇术打击 - 终端</h3>
+            </div>
+            <hr/>
+            <div class="terminal-encrypt" style="display: inline-flex;">
+                <p>当前加密方式：</p>
+                <h2 style="color: #2a4c7a;">凯撒加密</h2>
+            </div>
+            <div class="alert alert-danger" role="alert" style="margin-top: 27px;" id="decin">
+                无法部署奇术打击。原因：Decryption incorrect.
+            </div>
+            <br/>
+            <br/>
+            <div class="row" style="margin-left: 75px;">
+                <div class="col">
+                    <h2 id="e1" style="text-align: center; max-width: 200px;">ABCDE</h2>
+                    <input class="answer-input" id="e1_a">
+                </div>
+                
+                <div class="col">
+                    <h2 id="e2" style="text-align: center; max-width: 200px;">ABCDE</h2>
+                    <input class="answer-input" id="e2_a">
+                </div>
+                
+                <div class="col">
+                    <h2 id="e3" style="text-align: center; max-width: 200px;">ABCDE</h2>
+                    <input class="answer-input" id="e3_a">
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="terminal-submit">
+                <button class="submitbtn btn btn-outline-info btn-lg" type="button" id="submit" style="margin: 10px; margin-left: 45%;">&nbsp;部&nbsp;&nbsp;署&nbsp;</button>
+            </div>
+            <br/>
+            <br/>
+            <div class="terminal-result" style="display: inline-flex">
+                <p>解密结果为该字母在字母表上向前推第</p>
+                <h3 id="pos" style="padding: 5px; color: #2a4c7a;">3</h3>
+                <p>位</p>
+            </div>
+        </div>
+        <script>
+            /*
+            * Global Occult Coalition
+            * 奇术打击终端部署
+            */
+            
+            let e1_t = document.getElementById("e1");
+            let e1_a = document.getElementById("e1_a");
+            let e2_t = document.getElementById("e2");
+            let e2_a = document.getElementById("e2_a");
+            let e3_t = document.getElementById("e3");
+            let e3_a = document.getElementById("e3_a");
+            
+            let _pos = document.getElementById("pos");
+            
+            let answers = [
+                "GOC", "HOPE", "LIVE", "GSSB", "SNOW", "WIND", "DEAD", "TECH",
+                "WIN", "SCP", "HACK", "WAY", "SUN", "MOON", "TIME", "LOST"
+            ];
+            
+            let tabo = [
+                "HPD", "IPQF", "MJWF", "HTTC", "TOPX", "XJOE", "EFBE", "UFDI",
+                "XJO", "TDQ", "IBDL", "XBZ", "TVO", "NPPO", "UJNF", "MPTU"
+            ];
+            
+            let tabt = [
+                "IQE", "JQRG", "NKXG", "IUUD", "UPQY", "YKPF", "FGCF", "VGEJ",
+                "YKP", "UER", "JCEM", "YCA", "UWP", "OQQP", "VKOG", "NQUV"
+            ];
+            
+            let tabth = [
+                "JRF", "KRSH", "OLYH", "JVVE", "VQRZ", "ZLQG", "GHDG", "WJFK",
+                "ZLQ", "VFS", "KDFN", "ZDB", "VXQ", "PRRQ", "WLPH", "ORVW"
+            ];
+            
+            let tabf = [
+                "KSG", "LSTI", "PMZI", "KWWF", "WRSA", "AMRH", "HIEH", "XIGL",
+                "AMR", "WGT", "LEGO", "AEC", "WYR", "QSSR", "XMQI", "PSWX"
+            ];
+            
+            let tabfi = [
+                "LTH", "MTUJ", "QNAJ", "LXXG", "XSTB", "BNSI", "IJFI", "YJHM",
+                "BNS", "XHU", "MFHP", "BFD", "XZS", "RTTS", "YNRJ", "QTXY"
+            ];
+            
+            function get_random (list) {
+              return list[Math.floor((Math.random()*list.length))];
+            }
+            
+            let gtab = 0;
+            
+            function generate() {
+                /*
+                * 奇术打击谜题
+                */
+                
+
+                let _random = Math.floor(Math.random() * 5);
+                
+                // generate tab
+                let tab = [];
+                let tabpos = _random;
+                if (_random == 1) tab = tabo;
+                else if (_random == 2) tab = tabt;
+                else if (_random == 3) tab = tabth;
+                else if (_random == 4) tab = tabf;
+                else if (_random == 5) tab = tabfi;
+                else tab = tabo;
+                if (tabpos > 5 || tabpos == 0) tabpos = 1;
+                gtab = tabpos;
+                
+                // generate title
+                e1_t.innerText = get_random(tab);
+                e2_t.innerText = get_random(tab);
+                e3_t.innerText = get_random(tab);
+                
+                _pos.innerText = tabpos;
+                
+                decin.hidden = true;
+            }
+            
+            function deploy() {
+                /*
+                * 部署，提交答案
+                */
+                
+                let tab = [];
+                let _random = gtab;
+                if (_random == 1) tab = tabo;
+                else if (_random == 2) tab = tabt;
+                else if (_random == 3) tab = tabth;
+                else if (_random == 4) tab = tabf;
+                else if (_random == 5) tab = tabfi;
+                else tab = tabo;
+                
+                let a1 = e1_a.value, a2 = e2_a.value, a3 = e3_a.value;
+                let _aequal = e1_t.innerText == tab [answers.indexOf(a1)] && e2_t.innerText == tab [answers.indexOf(a2)] && e3_t.innerText == tab [answers.indexOf(a3)];
+                console.log("[debug] _aequal = " + _aequal);
+                if (_aequal) { alert("正确。"); }
+                else decin.hidden = false;
+            }
+            
+            function fdeploy() {
+                /*
+                * （预览动画用）直接部署
+                *
+                *
+                */
+                
+                document.getElementsByClassName("terminal") [0].classList.add("hide"); 
+                effect();
+            }
+            
+            submit.addEventListener("click", deploy);
+            window.addEventListener('load', generate);
+        </script>
+    </body>
+</html>
